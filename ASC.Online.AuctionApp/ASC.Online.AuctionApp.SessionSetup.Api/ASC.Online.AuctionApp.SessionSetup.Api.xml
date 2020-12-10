@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASC.Online.AuctionApp.SessionSetup.Api</name>
+    </assembly>
+    <members>
+        <member name="T:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController">
+            <summary>
+            Sessions Controller
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="F:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.sessionComponent">
+            <summary>
+            The session component
+            </summary>
+        </member>
+        <member name="F:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.#ctor(ASC.Online.AuctionApp.SessionSetup.Business.Components.Interface.ISessionComponent,Microsoft.Extensions.Logging.ILogger{ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController})">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController"/> class.
+            </summary>
+            <param name="sessionComponent">The session component.</param>
+            <param name="logger">The logger.</param>
+            <exception cref="T:System.ArgumentNullException">
+            sessionComponent
+            or
+            logger
+            </exception>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.GetAllSessionsAsync">
+            <summary>
+            Gets all sessions asynchronous.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.GetSessionById(System.Int64)">
+            <summary>
+            Gets the session by identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.CreateSession(ASC.Online.AuctionApp.Framework.Models.Models.Session.AuctionSessionCreateRequest)">
+            <summary>
+            Creates the session.
+            </summary>
+            <param name="auctionSessionCreateRequest">The auction session create request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.PartiallyUpdateSession(System.Int64,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{ASC.Online.AuctionApp.Framework.Models.Models.Session.AuctionSessionUpdateRequest})">
+            <summary>
+            Partiallies the update session.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="jsonPatchDocument">The json patch document.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.UpdateSession(System.Int64,ASC.Online.AuctionApp.Framework.Models.Models.Session.AuctionSessionUpdateRequest)">
+            <summary>
+            Updates the session.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="updateRequest">The update request.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Controllers.SessionsController.DeleteSession(System.Int64)">
+            <summary>
+            Deletes the session.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ASC.Online.AuctionApp.SessionSetup.Api.FluentValidators.SessionCreateValidator">
+            <summary>
+            
+            </summary>
+            <seealso cref="T:FluentValidation.AbstractValidator`1" />
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.FluentValidators.SessionCreateValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASC.Online.AuctionApp.SessionSetup.Api.FluentValidators.SessionCreateValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:ASC.Online.AuctionApp.SessionSetup.Api.FluentValidators.SessionUpdateValidator">
+            <summary>
+            Auction session update DTO validator
+            </summary>
+            <seealso cref="T:FluentValidation.AbstractValidator`1" />
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.FluentValidators.SessionUpdateValidator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASC.Online.AuctionApp.SessionSetup.Api.FluentValidators.SessionCreateValidator"/> class.
+            </summary>
+        </member>
+        <member name="T:ASC.Online.AuctionApp.SessionSetup.Api.Program">
+            <summary>
+            Main Program
+            </summary>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Program.Main(System.String[])">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Creates the host builder.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns></returns>
+        </member>
+        <member name="T:ASC.Online.AuctionApp.SessionSetup.Api.Startup">
+            <summary>
+            Start up class
+            </summary>
+        </member>
+        <member name="P:ASC.Online.AuctionApp.SessionSetup.Api.Startup.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+            <value>
+            The configuration.
+            </value>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ASC.Online.AuctionApp.SessionSetup.Api.Startup"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="env">The env.</param>
+            <param name="apiVersionDescriptionProvider">The API version description provider.</param>
+        </member>
+        <member name="M:ASC.Online.AuctionApp.SessionSetup.Api.Startup.GetVersionDescriptionProvider(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Returns build service provider
+            </summary>
+            <param name="services"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
